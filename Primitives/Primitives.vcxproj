@@ -10,10 +10,17 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\utils\freeglut-2.8.1\lib\freeglut.lib" />
+    <Library Include="..\utils\GLTools\lib\gltools.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="primitives.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E408D31B-B8AE-448F-9051-E4AD45E1983D}</ProjectGuid>
+    <ProjectGuid>{5C3B02F0-B724-45E5-97FE-E679D63D54D4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Triangle</RootNamespace>
+    <RootNamespace>Primitives</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -58,7 +65,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -79,17 +85,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="triangle.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="..\utils\freeglut-2.8.1\lib\freeglut.lib">
-      <FileType>Document</FileType>
-    </Library>
-    <Library Include="..\utils\GLTools\lib\gltools.lib">
-      <FileType>Document</FileType>
-    </Library>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

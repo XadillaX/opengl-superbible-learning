@@ -34,7 +34,7 @@ void BounceFunction()
 
     // 以方向向量移动基准点
     blockY += stepSize * yDir;
-	blockX += stepSize * xDir;
+    blockX += stepSize * xDir;
 
     // 碰撞检测并且反向
     if(blockX < -1.0f) blockX = -1.0f, xDir *= -1.0f;
