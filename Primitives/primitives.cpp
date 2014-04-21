@@ -94,8 +94,8 @@ void SetupRC()
         0.0f, 4.0f, 0.0f
     };
 
-    triangleBatch.Begin(GL_TRIANGLES, 24);
-    triangleBatch.CopyVertexData3f(vCoast);
+    triangleBatch.Begin(GL_TRIANGLES, 12);
+    triangleBatch.CopyVertexData3f(vPyramid);
     triangleBatch.End();
 
     GLfloat vPoints[100][3];
@@ -118,8 +118,8 @@ void SetupRC()
     vPoints[nVerts][1] = 0;
     vPoints[nVerts][2] = 0.0f;
 
-    triangleFanBatch.Begin(GL_TRIANGLE_FAN, 24);
-    triangleFanBatch.CopyVertexData3f(vCoast);
+    triangleFanBatch.Begin(GL_TRIANGLE_FAN, 8);
+    triangleFanBatch.CopyVertexData3f(vPoints);
     triangleFanBatch.End();
 
     int iCounter = 0;
@@ -150,20 +150,20 @@ void SetupRC()
     vPoints[iCounter][2] = 0.5;
     iCounter++;
 
-    triangleStripBatch.Begin(GL_TRIANGLE_STRIP, 24);
-    triangleStripBatch.CopyVertexData3f(vCoast);
+    triangleStripBatch.Begin(GL_TRIANGLE_STRIP, iCounter);
+    triangleStripBatch.CopyVertexData3f(vPoints);
     triangleStripBatch.End();    
 }
 
 void DrawWireFramedBatch(GLBatch* pBatch)
 {
+    // »æÖÆÂÌÉ«
     shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vGreen);
-
     pBatch->Draw();
 
+    // Íâ¿ò
     glPolygonOffset(-1.0f, -1.0f);
     glEnable(GL_POLYGON_OFFSET_LINE);
-
     glEnable(GL_LINE_SMOOTH);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -306,7 +306,7 @@ int main(int argc, char* argv[])
 	    fprintf(stderr, "GLEW Error: %s\n", glewGetErrorString(err));
 	    return 1;
 	}
-
+	
     SetupRC();
 
     glutMainLoop();

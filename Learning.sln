@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Triangle", "Triangle\Triang
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Primitives", "Primitives\Primitives.vcxproj", "{5C3B02F0-B724-45E5-97FE-E679D63D54D4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeoTest", "GeoTest\GeoTest.vcxproj", "{F16AB337-EB39-4928-9D60-C96C2B09C088}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{5C3B02F0-B724-45E5-97FE-E679D63D54D4}.Debug|Win32.Build.0 = Debug|Win32
 		{5C3B02F0-B724-45E5-97FE-E679D63D54D4}.Release|Win32.ActiveCfg = Release|Win32
 		{5C3B02F0-B724-45E5-97FE-E679D63D54D4}.Release|Win32.Build.0 = Release|Win32
+		{F16AB337-EB39-4928-9D60-C96C2B09C088}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F16AB337-EB39-4928-9D60-C96C2B09C088}.Debug|Win32.Build.0 = Debug|Win32
+		{F16AB337-EB39-4928-9D60-C96C2B09C088}.Release|Win32.ActiveCfg = Release|Win32
+		{F16AB337-EB39-4928-9D60-C96C2B09C088}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
